@@ -8,6 +8,8 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -17,23 +19,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
 import java.util.HashMap;
 import java.util.Map;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A simple FeedbackFragment subclass.
  */
 public class FeedbackFragment extends Fragment implements View.OnClickListener{
 
-    ProgressDialog progressDialog;
-    RequestQueue queue;
+    private ProgressDialog progressDialog;
+    private RequestQueue queue;
 
     private final String RATING = "entry.640208087";
     private final String INFO = "entry.190290850";
@@ -43,16 +43,16 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener{
     private final String OTHER = "entry.1769431798";
 
 
-    Button submit;
-    RadioButton num1, num2, num3, yes, no;
-    EditText edtQuestion3, edtQuestion4, edtQuestion5, edtQuestion6;
+    private Button submit;
+    private RadioButton num1, num2, num3, yes, no;
+    private EditText edtQuestion3, edtQuestion4, edtQuestion5, edtQuestion6;
     public FeedbackFragment() {
         // Required empty public constructor
     }
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_feedback, container, false);
@@ -84,6 +84,7 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener{
         queue = Volley.newRequestQueue(getActivity());
         return view;
     }
+
     @Override
     public void onClick(View v) {
         String myNum="";
@@ -109,9 +110,13 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener{
         }
 
 
-
-    public void postData(final String q1, final String q2, final String q3, final String q4,
+    /*
+     * A class that will be used to collect user's input and then post to google form entries
+     */
+    private void postData(final String q1, final String q2, final String q3, final String q4,
                          final String q5, final String q6) {
+
+       // The link that will get all user inputs
         final String myURL = "https://docs.google.com/forms/d/e/1FAIpQLSfoezxqEGH7bj42q4DJlTGpfO6n7kw4VVjv9ckbEQBjtDgXzw/formResponse";
         progressDialog.show();
         StringRequest request = new StringRequest(
@@ -123,6 +128,8 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener{
                         Log.d("TAG", "Response: " + response);
                         if (response.length() > 0) {
                             Snackbar.make(submit, "Successfully Posted", Snackbar.LENGTH_LONG).show();
+
+                            // Reset all values after user input values
                             num1.setChecked(false);
                             num2.setChecked(false);
                             num3.setChecked(false);
@@ -145,6 +152,9 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener{
                 Snackbar.make(submit, "Error while Posting Data", Snackbar.LENGTH_LONG).show();
             }
         }) {
+
+
+            // Putting values into google form entries
             @Override
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<>();
@@ -157,6 +167,8 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener{
                 return params;
             }
         };
+
+        //set up response time
         request.setRetryPolicy(new DefaultRetryPolicy(
                 50000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

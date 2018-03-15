@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:textSize="@dimen/text_font"
                     android:layout_height="wrap_content"
-                    android:text="@string/num2"
+                    android:text="@string/num3"
                     />
             </RadioGroup>
             <TextView
