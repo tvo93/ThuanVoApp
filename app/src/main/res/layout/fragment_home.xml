@@ -1,0 +1,185 @@
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+   android:layout_width="fill_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="interview.handimaps.thuanvoapp.HomeFragment"
+        android:layout_width="fill_parent"
+        android:gravity="top"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/imageWidth"
+        android:paddingLeft="@dimen/paddingHorizontal"
+        android:paddingRight="@dimen/paddingHorizontal"
+        android:paddingTop="@dimen/paddingVertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_name"
+            android:textAlignment="center"
+            android:textColor="@color/titleColor"
+            android:textSize="@dimen/title_font"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/imageWidth"
+            android:layout_height="@dimen/imageWidth"
+            android:contentDescription="@string/description"
+            android:src="@drawable/thuan" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intro2"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_font"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/intro1"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_font"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:layout_width="@dimen/imageWidth"
+            android:layout_height="@dimen/imageHeight"
+            android:layout_gravity="center"
+            android:contentDescription="@string/description"
+            android:src="@drawable/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/textbox"
+            android:paddingLeft="@dimen/paddingSubVertical"
+            android:paddingRight="@dimen/paddingSubVertical"
+            android:paddingTop="@dimen/paddingSubVertical"
+            android:paddingBottom="@dimen/paddingSubVertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/content1"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/subtitle_font"
+                android:textStyle="bold" />
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/content2"
+                android:textSize="@dimen/text_font"
+                android:drawableLeft="@drawable/check"
+                android:drawableStart="@drawable/check"
+                android:drawablePadding="@dimen/padding"
+                />
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/content3"
+                android:textSize="@dimen/text_font"
+                android:drawableLeft="@drawable/check"
+                android:drawableStart="@drawable/check"
+                android:drawablePadding="@dimen/padding"
+                />
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/content4"
+                android:textSize="@dimen/text_font"
+                android:drawableLeft="@drawable/check"
+                android:drawableStart="@drawable/check"
+                android:drawablePadding="@dimen/padding"
+                />
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/content5"
+                android:textSize="@dimen/text_font"
+                android:drawableLeft="@drawable/check"
+                android:drawableStart="@drawable/check"
+                android:drawablePadding="@dimen/padding"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/about"
+                android:paddingTop="@dimen/padding"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/subtitle_font"
+                android:textStyle="bold" />
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/content6"
+                android:textSize="@dimen/text_font"
+                android:drawableLeft="@drawable/check"
+                android:drawableStart="@drawable/check"
+                android:drawablePadding="@dimen/padding"
+                />
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="@string/content7"
+                android:textSize="@dimen/text_font"
+                android:drawableLeft="@drawable/check"
+                android:drawableStart="@drawable/check"
+                android:drawablePadding="@dimen/padding"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contact"
+                android:textColor="@color/textColor"
+                android:paddingTop="@dimen/padding"
+                android:textSize="@dimen/subtitle_font"
+                android:textStyle="bold" />
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="@dimen/padding"
+                android:drawableStart="@drawable/email"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding"
+                android:paddingStart="@dimen/padding"
+                android:text="@string/email"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_font"
+                android:textStyle="italic" />
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="@dimen/padding"
+                android:drawableStart="@drawable/phone"
+                android:paddingLeft="@dimen/padding"
+                android:paddingRight="@dimen/padding"
+                android:paddingStart="@dimen/padding"
+                android:text="@string/phone"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_font"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
